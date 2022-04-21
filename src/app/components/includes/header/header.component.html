@@ -1,25 +1,31 @@
 <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" [routerLink]="['/']">FlixMovies</a>
-    <ul class="navbar-nav ml-auto listMenu" *ngIf="authService.userData as user">
+    <ul class="navbar-nav ml-auto listMenu" >
         <li class="nav-item active">
             <a class="nav-link" [routerLink]="['/']" routerLinkActive="router-link-active">Home
                 <span class="sr-only">(current)</span>
             </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="authService.userData as user">
             <a class="nav-link" [routerLink]="['/movies']" routerLinkActive="router-link-active">Movies</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="authService.userData as user">
             <a class="nav-link" [routerLink]="['/tv']" routerLinkActive="router-link-active">TV Shows</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="authService.userData as user">
             <a class="nav-link" [routerLink]="['/genres']" routerLinkActive="router-link-active">Genres</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="authService.userData as user">
             <a class="nav-link" routerLinkActive="router-link-active">{{(user.email) ? user.email : 'User'}}</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="authService.userData as user">
             <a href="" class="nav-link" style="color: red!important" (click)="authService.SignOut()" routerLinkActive="router-link-active">Log out</a>
+        </li>
+        <li class="nav-item" *ngIf="authService.userData == null">
+            <a class="nav-link" [routerLink]="['/sign-in']" routerLinkActive="router-link-active">Login</a>
+        </li>
+        <li class="nav-item" *ngIf="authService.userData == null">
+            <a class="nav-link" [routerLink]="['/register-user']" routerLinkActive="router-link-active">Register</a>
         </li>
     </ul>
     <span class="sidebar-nav-btn"  pButton icon="pi pi-plus" label="Show" (click)="leftSidebar = true"><img src="assets/images/menu.svg"></span>
