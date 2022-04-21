@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Angular  FlixMovies & TV Shows was generated with:
+## Angular  MovieApp & TV Shows was generated with:
 
 - Angular CLI version 8.3.9
 - Angular 8.3.9
@@ -18,7 +18,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 - The Movie DB get Your own api key -> https://www.themoviedb.org
 - Firebase get your own firebase data -> https://firebase.google.com
 
-Live Demo https://flixmovies-82298.firebaseapp.com
+Live Demo https://MovieApp-82298.firebaseapp.com
 
 
 ## Installation
@@ -31,8 +31,8 @@ ng serve and go to http://localhost:4200/
 ```
 
 <p align="center">
-    <a href="https://flixmovies-82298.firebaseapp.com">
-        <img src="https://github.com/abidakram01/FlixMovies/blob/master/moviesScreen.png" alt="FlixMovies" />
+    <a href="https://MovieApp-82298.firebaseapp.com">
+        <img src="https://github.com/abidakram01/MovieApp/blob/master/moviesScreen.png" alt="MovieApp" />
     </a>
 </p>
 
