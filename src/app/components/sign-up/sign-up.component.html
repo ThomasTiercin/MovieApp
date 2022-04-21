@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 form">
+      <section class="input-content">
+        <h2>Sign Up</h2>
+        <div class="input-content-wrap">
+          <dl class="inputbox">
+            <dt class="inputbox-title"></dt>
+            <dd class="inputbox-content">
+              <input id="input0" type="email"  #userEmail required/>
+              <label for="input0">Email</label>
+              <span class="underline"></span>
+            </dd>
+          </dl>
+          <dl class="inputbox">
+            <dd class="inputbox-content">
+              <input id="input1" type="password"  #userPwd required/>
+              <label for="input1">Password</label>
+              <span class="underline"></span>
+            </dd>
+          </dl>
+          <div class="btns d-flex justify-content-center">
+              <button class="btn btn-confirm" (click)="authService.SignUp(userEmail.value, userPwd.value)">Sign In</button>                            
+              <a class="google btn" (click)="authService.GoogleAuth()">
+                <i class="fa fa-google fa-fw"></i> Continue with Google
+              </a>
+          </div>
+          <div class="redirectToLogin">
+            <span>Already have an account?<a class="redirect" routerLink="/sign-in"> Log In</a></span>
+          </div>
+        </div>
+      </section>      
+    </div>
+  </div>
+</div>
+  

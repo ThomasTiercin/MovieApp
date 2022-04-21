@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 form">
+      <section class="input-content">
+        <h2>Thank You for Registering</h2>
+        <div class="input-content-wrap">
+          <div class="formGroup" *ngIf="authService.userData as user">
+            <span>We have sent a confirmation email to <strong> {{user.email}}</strong>.</span><br/>
+            <span>Please check your email and click on the link to verfiy your email address.</span>
+          </div>          
+          <div class="btns d-flex justify-content-center">
+            <button type="button" class="btn btn-confirm" (click)="authService.SendVerificationMail()">
+              <i class="fas fa-redo-alt"></i>
+              Resend Verification Email
+            </button>
+          </div>
+          <div class="redirectToLogin">
+            <span>Go back to?<a class="redirect" routerLink="/sign-in"> Sign in</a></span>
+          </div>
+        </div>
+      </section>      
+    </div>
+  </div>
+</div>
