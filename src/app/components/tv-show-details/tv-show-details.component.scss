@@ -1,0 +1,19 @@
+.subname {
+    margin: 0 0 1.4rem;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    color: #212121;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+  
+    @media (min-width: 768px) {
+      margin-bottom: 1.8rem;
+    }
+  
+    @media (min-width: 1200px) {
+      font-size: 1.4vw;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
