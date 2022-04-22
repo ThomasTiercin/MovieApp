@@ -33,28 +33,36 @@
 
 <p-sidebar [(visible)]="leftSidebar" position="left" [baseZIndex]="10000">
     <div class="sidebarNav">
-        <div class="menu-container" *ngIf="authService.userData as user">
+        <div class="menu-container" >
             <div class="sidebarMenu">
                 <img src="assets/images/home.svg">
                 <a class="sidebar-nav-link" [routerLink]="['/']" routerLinkActive="router-link-active">Home
                     <span class="sr-only">(current)</span>
                 </a>
             </div>
-            <div class="sidebarMenu">
+            <div class="sidebarMenu" *ngIf="authService.userData as user">
                 <img src="assets/images/videos.svg">
                 <a class="sidebar-nav-link" [routerLink]="['/movies']" routerLinkActive="router-link-active">Movies</a>
             </div>
-            <div class="sidebarMenu">
+            <div class="sidebarMenu" *ngIf="authService.userData as user">
                 <img src="assets/images/tv.svg">
                 <a class="sidebar-nav-link" [routerLink]="['/tv']" routerLinkActive="router-link-active">TV Shows</a>
             </div>
-            <div class="sidebarMenu genre_">
+            <div class="sidebarMenu genre_" *ngIf="authService.userData as user">
                 <img src="assets/images/tripod.svg">
                 <a class="sidebar-nav-link" [routerLink]="['/genres']" routerLinkActive="router-link-active">Genres</a>
             </div>
-            <div class="sidebarMenu">
+            <div class="sidebarMenu" *ngIf="authService.userData as user">
                 <img src="assets/images/logout.png">
                 <a class="sidebar-nav-link" (click)="authService.SignOut()">Log out</a>
+            </div>
+            <div class="sidebarMenu genre_" *ngIf="authService.userData == null">
+                <img src="assets/images/login.png">
+                <a class="sidebar-nav-link" [routerLink]="['/sign-in']" routerLinkActive="router-link-active">Login</a>
+            </div>
+            <div class="sidebarMenu genre_" *ngIf="authService.userData == null">
+                <img src="assets/images/register.png">
+                <a class="sidebar-nav-link" [routerLink]="['/register-user']" routerLinkActive="router-link-active">Register</a>
             </div>
         </div>
     </div>
